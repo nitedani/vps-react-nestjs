@@ -1,0 +1,52 @@
+{
+  "scripts": {
+    "start:dev": "vite -c config/vite.server.config.ts",
+    "build": "rimraf dist && vite -c ./src/vite.config.ts build && vite build -c ./server/vite.config.ts",
+    "bundle": "rimraf dist && vite -c ./src/vite.config.ts build && webpack -c ./server/webpack.config.js && rimraf dist/server",
+    "start:prod": "cross-env NODE_ENV=production node dist/main.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.0",
+    "@chakra-ui/react": "^2.0.2",
+    "@chakra-ui/theme-tools": "^2.0.0",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
+    "@nestjs/common": "^8.4.5",
+    "@nestjs/core": "^8.4.5",
+    "@nestjs/platform-express": "^8.4.5",
+    "express": "^4.17.3",
+    "framer-motion": "6",
+    "ky": "^0.30.0",
+    "lodash-es": "^4.17.21",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-query": "^3.39.0",
+    "react-streaming": "^0.2.10",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.5.5",
+    "shrink-ray-current": "^4.1.3",
+    "vite-plugin-ssr": "0.4.0-beta.24"
+  },
+  "devDependencies": {
+    "vite": "^2.8.4",
+    "@swc/core": "^1.2.186",
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.13",
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^17.0.19",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.2",
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2",
+    "swc-loader": "^0.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.7.1-rc",
+    "vite-plugin-node": "^1.0.0",
+    "vite-tsconfig-paths": "^3.4.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-messages": "^2.0.4"
+  }
+}

@@ -7,9 +7,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.0",
-    "@chakra-ui/react": "^2.0.2",
-    "@chakra-ui/theme-tools": "^2.0.0",
+    "@chakra-ui/icons": "2.0.0",
+    "@chakra-ui/react": "2.1.0",
+    "@chakra-ui/theme-tools": "2.0.0",
     "@emotion/react": "11",
     "@emotion/styled": "11",
     "@nestjs/common": "^8.4.5",

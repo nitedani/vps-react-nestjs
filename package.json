@@ -1,8 +1,8 @@
 {
   "scripts": {
     "start:dev": "vite -c config/vite.server.config.ts",
-    "build": "rimraf dist && vite -c ./src/vite.config.ts build && vite build -c ./server/vite.config.ts",
-    "bundle": "rimraf dist && vite -c ./src/vite.config.ts build && webpack -c ./server/webpack.config.js && rimraf dist/server",
+    "build": "rimraf dist && vite build -c ./config/vite.client.config.ts && vite build -c ./config/vite.server.config.ts",
+    "bundle": "rimraf dist && vite build -c ./config/vite.client.config.ts && webpack -c ./config/webpack.config.js && rimraf dist/server",
     "start:prod": "cross-env NODE_ENV=production node dist/main.mjs"
   },
   "type": "module",

@@ -9,7 +9,7 @@ process.env.NODE_ENV = "production";
 
 const config = {
   stats: "errors-only",
-  entry: join(__dirname, "main.ts"),
+  entry: join(__dirname, "..", "server", "main.ts"),
   mode: "production",
   target: "node",
   output: {
@@ -78,7 +78,7 @@ const config = {
           "class-validator",
           "fastify-swagger",
           "fastify-static",
-          "point-of-view"
+          "point-of-view",
         ];
         if (!lazyImports.includes(resource)) {
           return false;

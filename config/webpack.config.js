@@ -1,5 +1,4 @@
 import { dirname, join } from "path";
-import ResolveTypeScriptPlugin from "resolve-typescript-plugin";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { fileURLToPath } from "url";
 import WebpackMessages from "webpack-messages";
@@ -57,7 +56,6 @@ const config = {
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".cjs", ".mjs", ".json"],
     plugins: [
-      new ResolveTypeScriptPlugin(),
       //@ts-ignore
       new TsconfigPathsPlugin({
         configFile: join(__dirname, "..", "tsconfig.json"),

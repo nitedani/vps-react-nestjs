@@ -65,16 +65,13 @@ export const getColorModeManager = (pageContext: PageContext) => {
         Vary: "Sec-CH-Prefers-Color-Scheme",
         "Critical-CH": "Sec-CH-Prefers-Color-Scheme",
       });
-      const prefersColorScheme = pageContext.req.get(
-        "sec-ch-prefers-color-scheme"
-      );
+      const prefersColorScheme = req.get("sec-ch-prefers-color-scheme");
 
       if (
         prefersColorScheme &&
         ["light", "dark"].includes(prefersColorScheme)
       ) {
         initialColorMode = prefersColorScheme as ColorMode;
-        res.cookie("chakra-ui-color-mode", initialColorMode);
       }
     }
   } else {

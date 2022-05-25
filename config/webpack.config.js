@@ -2,7 +2,6 @@ import { dirname, join } from "path";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { fileURLToPath } from "url";
 import WebpackMessages from "webpack-messages";
-import nodeExternals from "webpack-node-externals";
 import webpack from "webpack";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 

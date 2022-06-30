@@ -1,10 +1,8 @@
 import { Controller, Get } from "@nestjs/common";
 
-let i = 0;
+let i = 2;
 @Controller()
 export class AppController {
-  constructor() {}
-
   @Get("/hello")
   getHello() {
     return i++;

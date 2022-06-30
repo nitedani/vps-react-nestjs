@@ -1,8 +1,9 @@
 import { HttpAdapterHost, Module } from "@nestjs/common";
-import { AppController } from "./app.controller";
+import { ApiController } from "./api.controller";
+import { SSRController } from "./ssr.controller";
 
 @Module({
-  controllers: [AppController],
+  controllers: [SSRController, ApiController],
   imports: [],
 })
 export class AppModule {

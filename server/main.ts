@@ -1,6 +1,5 @@
 import { NestFactory } from "@nestjs/core";
 import type { Express } from "express";
-import compression from "shrink-ray-current";
 import httpDevServer from "vavite/http-dev-server";
 import { AppModule } from "./app.module";
 import { renderPage } from "vite-plugin-ssr";
@@ -34,7 +33,6 @@ async function bootstrap() {
 
   if (import.meta.env.PROD) {
     app.enableCors();
-    app.use(compression());
     const port = process.env.PORT || 3000;
     app.use(express.static(join(__dirname, "client")));
     app.listen(port);
